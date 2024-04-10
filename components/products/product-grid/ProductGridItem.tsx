@@ -14,7 +14,7 @@ export const ProductGridItem = ({ product }: Props) => {
 
   return (
     <div className='rounded-md overflow-hidden fade-in'>
-      <Link href={`product/${product.slug}`}>
+      <Link href={`/product/${product.slug}`}>
         <Image
           src={`/products/${displayImage}`}
           alt={product.title}
@@ -23,6 +23,7 @@ export const ProductGridItem = ({ product }: Props) => {
           height={500}
           onMouseEnter={() => setDisplayImage(product.images[1])}
           onMouseLeave={() => setDisplayImage(product.images[0])}
+          priority
         />
       </Link>
 
